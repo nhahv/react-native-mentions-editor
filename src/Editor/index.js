@@ -544,6 +544,7 @@ export class Editor extends React.Component {
               >
                 {state.formattedText !== "" ? (
                   <Text
+                    letterSpacing={0}
                     style={[styles.formmatedText, editorStyles.inputMaskText]}
                   >
                     {state.formattedText}
@@ -560,6 +561,7 @@ export class Editor extends React.Component {
                 )}
               </View>
               <TextInput
+
                 ref={input => props.onRef && props.onRef(input)}
                 style={[styles.input, editorStyles.input]}
                 multiline

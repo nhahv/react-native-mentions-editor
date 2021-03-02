@@ -1,11 +1,20 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
+
+const { width, height } = Dimensions.get("window");
+const screenWidth = width < height ? width : height;
+const screenHeight = width < height ? height : width;
+
 
 export default StyleSheet.create({
   container: {
     backgroundColor: "#fff",
-    borderColor: "green",
+    borderColor: "#999",
     borderWidth: 1,
-    width: 300
+    minWidth:screenWidth - 60,
+    borderRadius: 4,
+    alignSelf: "stretch",
+    right:0,
+    marginBottom:5,
   },
   textContainer: {
     alignSelf: "stretch",
@@ -15,23 +24,25 @@ export default StyleSheet.create({
   },
   input: {
     fontSize: 16,
-    color: "#000",
     fontWeight: "400",
-    paddingHorizontal: 20,
+    paddingHorizontal: 10,
     minHeight: 40,
     position: "absolute",
     top: 0,
     color: "transparent",
     alignSelf: "stretch",
-    width: "100%"
+    width: "100%",
+    fontFamily:'Roboto'
   },
   formmatedTextWrapper: {
     minHeight: 40,
     position: "absolute",
     top: 0,
-    paddingHorizontal: 20,
+    paddingHorizontal: 10,
     paddingVertical: 5,
-    width: "100%"
+    alignSelf: "stretch",
+    width: "100%",
+    fontFamily:'Roboto'
   },
   formmatedText: {
     fontSize: 16,

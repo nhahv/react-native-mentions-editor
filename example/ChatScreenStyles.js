@@ -1,19 +1,14 @@
 import { StyleSheet, Dimensions } from "react-native";
-import { ApplicationStyles } from "../../Themes/";
-// import Colors from '../../Themes/Colors'
 
 const { width, height } = Dimensions.get("window");
 const screenWidth = width < height ? width : height;
 const screenHeight = width < height ? height : width;
 
 export default StyleSheet.create({
-  ...ApplicationStyles.screen,
   main: {
     flex: 1,
-
     backgroundColor: "#fff",
     height: screenHeight,
-
     marginTop: 100
   },
   container: {
@@ -42,8 +37,7 @@ export default StyleSheet.create({
 
   footer: {
     backgroundColor: "lightgreen",
-    height: 200,
-    width: screenWidth,
+    width: Dimensions.get("window").width,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
