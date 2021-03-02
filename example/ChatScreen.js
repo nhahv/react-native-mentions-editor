@@ -10,10 +10,10 @@ import {
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
 
-import Editor, { EU } from "react-native-mentions-editor";
+import Editor, { EU } from "../../react-native-mentions-editor";
 
 // Styles
-import styles from "./Styles/ChatScreenStyles";
+import styles from "./ChatScreenStyles";
 
 const users = [
   { id: 1, name: "Raza Dar", username: "mrazadar", gender: "male" },
@@ -134,6 +134,13 @@ class ChatScreen extends Component {
                 showMentions={this.state.showMentions}
                 onHideMentions={this.onHideMentions}
                 placeholder="You can write here..."
+                editorStyles={{
+                  mentionsListWrapper: {
+                    // position: 'absolute',
+                    // zIndex: 300,
+                    // left:0, right:0, bottom: 0
+                  }
+                }}
               />
               <TouchableOpacity
                 style={styles.sendBtn}
